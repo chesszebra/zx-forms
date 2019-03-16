@@ -1,0 +1,83 @@
+button, input, optgroup, select, textarea {
+  font-family: Roboto, sans-serif;
+  font-weight: 300;
+}
+
+textarea {
+  overflow: auto;
+  resize: vertical;
+}
+
+.zx-form-group {
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.zx-form-inline {
+  @include zx-align-items(center);
+  @include zx-display-flex;
+  @include zx-flex-flow(row wrap);
+
+  .zx-form-group {
+    @include zx-align-items(center);
+    @include zx-display-flex;
+    @include zx-flex(0, 0, auto);
+    @include zx-flex-flow(row wrap);
+
+    margin-bottom: 0;
+    margin-right: 1rem;
+  }
+
+  .zx-form-group:last-child {
+    margin-right: 0;
+  }
+}
+
+.zx-form-control {
+  @include zx-transition(0.2s linear);
+
+  background-color: #fff;
+  border: 1px solid #f1f2f3;
+  display: block;
+  font-size: 1rem;
+  line-height: 1.5;
+  padding: 0.5rem 1rem;
+  touch-action: manipulation;
+  width: 100%;
+}
+
+.zx-form-control.zx-valid {
+  border-color: #15c377 !important;
+}
+
+.zx-form-control.zx-invalid {
+  border-color: #f96868 !important;
+}
+
+label {
+  display: inline-block;
+  font-weight: 400;
+  letter-spacing: .5px;
+  margin-bottom: .5rem;
+}
+
+.zx-form-control-plaintext {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  margin-bottom: 0;
+  line-height: 1.5;
+  background-color: transparent;
+  border: solid transparent;
+  border-width: 1px 0;
+}
+
+.zx-form-check-control {
+  position: relative;
+  display: block;
+  margin-bottom: .5rem;
+}
+
+.zx-form-horizontal-check-control {
+  display: inline-block;
+  margin-right: .75rem;
+}
